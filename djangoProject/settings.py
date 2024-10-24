@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'hamed.apps.HamedConfig',
     'my_users',
     'payment_collector',
+    'borrow'
 ]
 
 MIDDLEWARE = [
