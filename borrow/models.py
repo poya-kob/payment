@@ -1,5 +1,6 @@
 from django.db import models
 from my_users.models import User
+from django_jalali.db import models as jmodels
 
 
 class Loan(models.Model):
@@ -8,8 +9,8 @@ class Loan(models.Model):
     """
     loan_code = models.UUIDField(auto_created=True, unique=True)
     term = models.IntegerField(null=True, blank=True)
-    start_date = models.DateField()
-    end_date = models.DateField()
+    start_date = jmodels.jDateField()
+    end_date = jmodels.jDateField()
     amount = models.DecimalField()
     status = models.CharField(max_length=50, choices=[
         ('end', "پایان یافته"),
@@ -25,7 +26,7 @@ class RequestLoan(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     loan = models.ForeignKey(Loan, on_delete=models.PROTECT)
-    request_date = models.DateField()
+    request_date = jmodels.jDateField()
     refund_amount = models.DecimalField(default=None)  # باقیمانده بازپرداخت
     status = models.CharField(max_length=50, choices=[
         ('pending', "در انتظار تایید"),
