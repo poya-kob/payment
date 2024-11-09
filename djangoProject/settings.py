@@ -40,8 +40,11 @@ INSTALLED_APPS = [
     'hamed.apps.HamedConfig',
     'my_users',
     'payment_collector',
+    'borrow',
 ]
 
+
+AUTH_USER_MODEL = "my_users.User"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
