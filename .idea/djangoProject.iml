@@ -15,6 +15,39 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/bootstrap/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/bootstrap-colorpicker/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/bootstrap-datepicker/build" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/bootstrap-datepicker/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/ckeditor/plugins/codesnippet/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/ckeditor/samples/toolbarconfigurator/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/ckeditor-english/plugins/codesnippet/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/ckeditor-english/samples/toolbarconfigurator/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/fastclick/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/fullcalendar/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/inputmask/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/external/sizzle/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/src/ajax/var" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/src/core/var" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/src/css/var" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/src/data/var" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/src/manipulation/var" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/src/traversing/var" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/src/var" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery-knob/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jquery-sparkline/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/jvectormap/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/mocha/media" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/moment/src/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/morris.js/examples/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/morris.js/spec/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/morris.js/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/select2/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/static/bower_components/tinymce/plugins/media" />
+      <excludeFolder url="file://$MODULE_DIR$/static/build" />
+      <excludeFolder url="file://$MODULE_DIR$/static/dist" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (payment)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
