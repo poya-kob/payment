@@ -7,5 +7,5 @@ class User(AbstractUser):
     email = None
     phone_number = models.CharField(max_length=11, unique=True)
     user_code = models.UUIDField(auto_created=True, unique=True)
-    USERNAME_FIELD = phone_number
+    USERNAME_FIELD = 'phone_number'
     REQUIRED_FIELDS = []

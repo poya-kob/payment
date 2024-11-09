@@ -11,7 +11,7 @@ class Loan(models.Model):
     term = models.IntegerField(null=True, blank=True)
     start_date = jmodels.jDateField()
     end_date = jmodels.jDateField()
-    amount = models.DecimalField()
+    amount = models.DecimalField(default=None, max_digits=10, decimal_places=2)
     status = models.CharField(max_length=50, choices=[
         ('end', "پایان یافته"),
         ('underwriting', "درحال پذیره نویسی"),
@@ -27,7 +27,7 @@ class RequestLoan(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     loan = models.ForeignKey(Loan, on_delete=models.PROTECT)
     request_date = jmodels.jDateField()
-    refund_amount = models.DecimalField(default=None)  # باقیمانده بازپرداخت
+    refund_amount = models.DecimalField(default=None, max_digits=10, decimal_places=2)  # باقیمانده بازپرداخت
     status = models.CharField(max_length=50, choices=[
         ('pending', "در انتظار تایید"),
         ('approved', "تایید شده"),
