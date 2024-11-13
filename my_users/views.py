@@ -17,7 +17,7 @@ def user_login(request):
 
         if user is not None:
             login(request, user)
-    return render(request, "", LoginForm)
+    return render(request, "loginpage.html", {'form': LoginForm})
 
 
 def logout_page(request):
@@ -35,6 +35,7 @@ def register_page(request):
         password = register_form.cleaned_data.get('password')
         first_name = register_form.cleaned_data.get('first_name')
         last_name = register_form.cleaned_data.get('last_name')
-        User.objects.create_user(username=phone, password=password, first_name=first_name, last_name=last_name)
+        User.objects.create_user(is_active=False, username=phone, password=password, first_name=first_name,
+                                 last_name=last_name)
         return redirect('/')
-    return render(request, "", {'register_form': register_form})
+    return render(request, "registerpage.html", {'register_form': register_form})
