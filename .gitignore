@@ -25,9 +25,8 @@ media
 
 # Distribution / packaging
 .Python
-build/
+
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -376,7 +375,3 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,django
-static/
-static/plugins
-/static/plugins/
-/static/

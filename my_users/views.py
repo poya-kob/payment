@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 
 from .forms import LoginForm, RegisterForm
-from .models import User
+
+User = get_user_model()
 
 
 def user_login(request):
@@ -38,4 +39,4 @@ def register_page(request):
         User.objects.create_user(is_active=False, username=phone, password=password, first_name=first_name,
                                  last_name=last_name)
         return redirect('/')
-    return render(request, "registerpage.html", {'register_form': register_form})
+    return render(request, "registerpage.html", {'form': register_form})
