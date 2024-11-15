@@ -1,5 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def dashboard_index(request):
-    return HttpResponse(f'سلام {request.user.get_full_name()}')
+    return render(request, 'dashboard/index.html')
