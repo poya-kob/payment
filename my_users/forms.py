@@ -3,7 +3,8 @@ from django import forms
 
 class LoginForm(forms.Form):
     phone_number = forms.CharField(
-        widget=forms.TextInput(attrs={'placeholder': 'نام کاربری خود را وارد کنید', 'class': 'form-control'})
+        widget=forms.TextInput(
+            attrs={'placeholder': 'شماره تلفن  خود را وارد کنید', 'type': 'tel', 'class': 'form-control'})
 
     )
     password = forms.CharField(
@@ -14,7 +15,7 @@ class LoginForm(forms.Form):
 class RegisterForm(forms.Form):
     phone_number = forms.IntegerField(
         widget=forms.NumberInput(
-            attrs={'placeholder': "شماره تلفن خود را وارد کنید",'type': 'tel', 'class': "form-control"}))
+            attrs={'placeholder': "شماره تلفن خود را وارد کنید", 'type': 'tel', 'class': "form-control"}))
     first_name = forms.CharField(
         widget=forms.TextInput(
             attrs={'placeholder': "نام خود را وارد کنید", 'class': "form-control"}))

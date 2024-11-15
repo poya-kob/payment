@@ -8,7 +8,7 @@ User = get_user_model()
 
 def user_login(request):
     if request.user.is_authenticated:
-        return redirect('/')
+        return redirect('dashboard-page')
     login_form = LoginForm(request.POST or None)
 
     if login_form.is_valid():
@@ -36,7 +36,7 @@ def register_page(request):
         password = register_form.cleaned_data.get('password')
         first_name = register_form.cleaned_data.get('first_name')
         last_name = register_form.cleaned_data.get('last_name')
-        User.objects.create_user(is_active=False, username=phone, password=password, first_name=first_name,
-                                 last_name=last_name)
+        user = User.objects.create_user(phone, password, is_active=False, first_name=first_name,
+                                        last_name=last_name)
         return redirect('/')
     return render(request, "registerpage.html", {'form': register_form})
