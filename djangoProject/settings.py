@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'my_users',
     'payment_collector',
     'borrow',
+    'dashboard',
 ]
 
 AUTH_USER_MODEL = "my_users.User"
