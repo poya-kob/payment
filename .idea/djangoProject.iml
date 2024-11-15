@@ -48,6 +48,9 @@
       <excludeFolder url="file://$MODULE_DIR$/static/bower_components/tinymce/plugins/media" />
       <excludeFolder url="file://$MODULE_DIR$/static/build" />
       <excludeFolder url="file://$MODULE_DIR$/static/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/media" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.12 (payment)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
