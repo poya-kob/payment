@@ -13,8 +13,8 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
-    phone_number = forms.IntegerField(
-        widget=forms.NumberInput(
+    phone_number = forms.CharField(
+        widget=forms.TextInput(
             attrs={'placeholder': "شماره تلفن خود را وارد کنید", 'type': 'tel', 'class': "form-control"}))
     first_name = forms.CharField(
         widget=forms.TextInput(

@@ -1,18 +1,22 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+
 from django_jalali.db import models as jmodels
 
-from my_users.models import User
-from borrow.models import Loan
+User = get_user_model()
 
 
 class InstallmentRePayment(models.Model):
     """
     بازپرداخت اقساط
     """
-    User = models.ForeignKey(User, on_delete=models.PROTECT)
-    loan = models.ForeignKey(Loan, on_delete=models.PROTECT)
-    image = models.ImageField(upload_to="")
-    payment = models.DecimalField(decimal_places=3, max_digits=10)
-    pay_date = jmodels.jDateField()
-    upload_date = jmodels.jDateField()
+    requested_loan = models.ForeignKey('borrow.RequestLoan', on_delete=models.PROTECT)
+    image = models.ImageField(upload_to="", null=True, blank=True)
+    payment = models.DecimalField(decimal_places=3, max_digits=10, null=True, blank=True)
+    installment_due_date = jmodels.jDateField()  # تاریخ سررسید قسط
+    upload_date = jmodels.jDateField(null=True, blank=True)
     is_verified = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = "قسط"
+        verbose_name_plural = verbose_name
