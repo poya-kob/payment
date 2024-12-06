@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django_jalali.db import models as jmodels
 
-from payment_collector.utils import create_user_refund
+from payment_collector.utils import create_monthly_installments
 
 User = get_user_model()
 
@@ -14,7 +14,7 @@ class Loan(models.Model):
     تعریف وام
     """
     loan_code = models.UUIDField(auto_created=True, unique=True, default=uuid.uuid4)
-    term = models.IntegerField(null=True, blank=True)  # تعداد ماه های اقساط
+    term = models.IntegerField(null=True, blank=True, default=20)  # تعداد ماه های اقساط
     start_date = jmodels.jDateField()  # تاریخ شروع پذیره نویسی
     end_date = jmodels.jDateField()  # تاریخ پایان پذیره نویسی
     amount = models.DecimalField(default=None, max_digits=10, decimal_places=2)  # مبلغ کل وام
@@ -24,6 +24,7 @@ class Loan(models.Model):
         ('default', "پیش فرض"),
     ])
     number_of_loan_payable = models.SmallIntegerField()  # تعداد وام های قابل پرداخت
+    objects = jmodels.jManager()
 
     class Meta:
         verbose_name = 'وام'
@@ -34,6 +35,7 @@ class RequestLoan(models.Model):
     """
     درخواست وام
     """
+    __orginal_status = None
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     loan = models.ForeignKey(Loan, on_delete=models.PROTECT)
     request_date = jmodels.jDateField(auto_now_add=True)
@@ -45,7 +47,7 @@ class RequestLoan(models.Model):
         ('danger', "رد شده"),
         ('success', "تایید شده"),
     ])
-    __orginal_status = None
+    objects = jmodels.jManager()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -55,7 +57,7 @@ class RequestLoan(models.Model):
         if self.__original_status != self.status:
             if self.status == 'success':
                 self.refund_amount = self.loan.amount / self.loan.number_of_loan_payable
-                create_user_refund(self)
+                create_monthly_installments(self)
         super().save(*args, **kwargs)
 
     class Meta:

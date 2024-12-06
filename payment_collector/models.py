@@ -16,6 +16,7 @@ class InstallmentRePayment(models.Model):
     installment_due_date = jmodels.jDateField()  # تاریخ سررسید قسط
     upload_date = jmodels.jDateField(null=True, blank=True)
     is_verified = models.BooleanField(default=False)
+    objects = jmodels.jManager()
 
     class Meta:
         verbose_name = "قسط"
