@@ -52,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'my middleware'
+    'dashboard.middlewares.LoginRequiredMiddleware'
 ]
 
 ROOT_URLCONF = 'djangoProject.urls'
