@@ -35,6 +35,11 @@ class RequestLoan(models.Model):
     """
     درخواست وام
     """
+    STATUS_CHOICES = [
+        ('success', 'پذیرفته شده'),
+        ('warning', 'در انتظار'),
+        ('danger', 'رد شده'),
+    ]
     __orginal_status = None
     user = models.ForeignKey(User, on_delete=models.PROTECT, related_name='requested_loan')
     loan = models.ForeignKey(Loan, on_delete=models.PROTECT)
@@ -42,11 +47,7 @@ class RequestLoan(models.Model):
     pay_date = jmodels.jDateField(null=True, blank=True)  # تاریخ پرداخت وام
     refund_amount = models.DecimalField(default=None, max_digits=10, decimal_places=2, null=True,
                                         blank=True)  # باقیمانده بازپرداخت
-    status = models.CharField(max_length=50, default='warning', choices=[
-        ('warning', "درحال بررسی"),
-        ('danger', "رد شده"),
-        ('success', "تایید شده"),
-    ])
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='warning')
     objects = jmodels.jManager()
 
     def __init__(self, *args, **kwargs):
@@ -61,7 +62,7 @@ class RequestLoan(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"{self.user}===>{self.loan}"
+        return f"درخواست وام {self.user.phone_number} - وضعیت: {self.status}"
 
     class Meta:
         verbose_name = 'درخواست '
