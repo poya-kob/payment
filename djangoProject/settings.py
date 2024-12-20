@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hamed.apps.HamedConfig',
     'django_jalali',
     'my_users',
     'payment_collector',
