@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+# Import all models from models module
+from .models import Fund, Account, SubscriptionHistory, Phone
