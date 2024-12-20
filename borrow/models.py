@@ -36,7 +36,7 @@ class RequestLoan(models.Model):
     درخواست وام
     """
     __orginal_status = None
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    user = models.ForeignKey(User, on_delete=models.PROTECT, related_name='requested_loan')
     loan = models.ForeignKey(Loan, on_delete=models.PROTECT)
     request_date = jmodels.jDateField(auto_now_add=True)
     pay_date = jmodels.jDateField(null=True, blank=True)  # تاریخ پرداخت وام
@@ -59,6 +59,9 @@ class RequestLoan(models.Model):
                 self.refund_amount = self.loan.amount / self.loan.number_of_loan_payable
                 create_monthly_installments(self)
         super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.user}===>{self.loan}"
 
     class Meta:
         verbose_name = 'درخواست '
