@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hamed.apps.HamedConfig',
     'django_jalali',
     'my_users',
     'payment_collector',
@@ -53,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'my middleware'
+    'dashboard.middlewares.LoginRequiredMiddleware'
 ]
 
 ROOT_URLCONF = 'djangoProject.urls'

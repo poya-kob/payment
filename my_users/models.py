@@ -15,5 +15,18 @@ class User(AbstractUser):
     REQUIRED_FIELDS = []
     objects = CustomUserManager()
 
+    @property
     def return_full_name(self):
         return f"{self.first_name} {self.last_name}"
+
+    def user_accepted_loan(self):
+        return self.requested_loan.filter(status='success')
+
+    def user_waiting_loan(self):
+        return self.requested_loan.filter(status='warning')
+
+    def user_rejected_loan(self):
+        return self.requested_loan.filter(status='danger')
+
+    def money_balance(self):
+        pass
