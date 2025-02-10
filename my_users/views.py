@@ -8,7 +8,7 @@ User = get_user_model()
 
 def user_login(request):
     if request.user.is_authenticated:
-        return redirect('dashboard')
+        return redirect('welcome')
     login_form = LoginForm(request.POST or None)
 
     if login_form.is_valid():
