@@ -1,0 +1,94 @@
+.project-wrapper .project-box-outer .counters-number,
+.navbar-link-wrapper ul > li.active > a span,
+.navbar-link-wrapper ul > li:hover > a span,
+.navbar-link-wrapper ul > li.active > a i,
+.navbar-link-wrapper ul > li:hover > a i,
+#slidebar-close-btn i:hover,
+.menu-right-1 .login-register-wrapper .login-register-outer .tab-buttons li a.active,
+.menu-right-1
+  .login-register-wrapper
+  .login-register-outer
+  .tab-content
+  .tabfirst-block
+  .form-wrapper
+  .form-group.checkbox-password
+  .forget-password,
+.service-content:hover .service-title,
+.blog-second-block:hover .blog-title,
+.skills-content-block .progress-outer-block .progress-title,
+.project-wrapper .project-box-outer .counters-number,
+.service-content:hover .service-content-dec .service-title,
+.contact-wrapper .contact-content-block .contact-dec,
+.video-wrapper .video-btn:after {
+  color: #ff0066;
+}
+#slidebar-close-btn i:hover::after,
+.menu-right-1 .login-register-wrapper .login-register-outer .tab-content .tabfirst-block .form-wrapper .login-btn,
+.progressbar2 .progress-bar,
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #ff0066;
+}
+.animated-bg i {
+  background-color: rgba(164, 69, 178, 0.5);
+}
+.main-title-wrapper .site-subtitle {
+  background-color: rgba(164, 69, 178, 0.1);
+}
+.menu-right-1 .search-outer-wrapper .search-close,
+.menu-right-1 .login-register-outer .login-close {
+  box-shadow: rgba(164, 69, 178, 0.28) -1px 2px 20px;
+}
+.progressbar1 .progress-bar {
+  background-color: #a445b2;
+}
+.menu-right-1 .login-register-wrapper .login-register-outer .tab-buttons li a.active,
+.menu-right-1
+  .login-register-wrapper
+  .login-register-outer
+  .tab-content
+  .tabfirst-block
+  .form-wrapper
+  .form-group
+  .form-control:focus,
+.menu-right-1 .login-register-wrapper .search-box .form-control:focus,
+.menu-right-1 .search-outer-wrapper .search-box .form-control:focus {
+  border-bottom: 2px solid #ff0066;
+}
+
+.progress.progressbar2 .progress-bar:after {
+  border-bottom: 6px solid #ff0066;
+}
+.progress .progress-bar:after {
+  border-bottom: 6px solid #a445b2;
+}
+
+.menu-right-1 .custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: #ff0066;
+}
+.gradient-color1 {
+  background-image: linear-gradient(white, white), linear-gradient(to bottom, #a445b2, #ff0066);
+}
+.theme-rtl input:checked + #slider,
+.service-content:hover .service-icon span i,
+.blog-second-block:hover .blog-icon span i,
+.footer-wrapper .footer-content-wrapper .footer-about-us .footer-about-outer .footer-link:before,
+.footer-wrapper .footer-content-wrapper .footer-title:after,
+.skills-content-block.main-title-wrapper .site-subtitle2:after,
+.portfolio-wrapper .portfolio-content .portfolio-first-block:before,
+header.header-sticky.sticky,
+.gradient-color {
+  background: linear-gradient(to right, #a445b2 0%, #ff0066 100%);
+}
+.gradient-color1 {
+  background-image: linear-gradient(white, white), linear-gradient(to bottom, #a445b2, #ff0066);
+}
+#demo1 .banner-wrapper {
+  background: url(../../image/banner/bg3.png) no-repeat left;
+}
+.service-content:hover .service-icon span:after,
+.blog-second-block:hover .blog-icon:after,
+.contact-wrapper .contact-animation-images span{
+  filter: opacity(0.1) drop-shadow(0 0 0 #a445b2);
+}

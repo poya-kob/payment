@@ -1,10 +1,78 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="{% static 'assets/image/favicon.png' %}" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}"/>
+    <!-- Owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/colors/color1.css' %}" id="color-opt"/>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}"/>
+
+    <title> صندوق فامیلی سادات</title>
+</head>
+
+<body class="rtl" data-menu-sticky='1' id="demo1">
+
+<!-- loader start -->
+<div class="loader"></div>
+<!-- loader end -->
+
+<!-- main-content start -->
+<div id="main-content">
+
+    <!-- banner start -->
+    <section class="banner-wrapper" id="home">
+        <div class="banner-outer">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="banner-content">
+                            <h5 class="banner-main-title">
+                                <span>مَّن ذَا الَّذِي يُقْرِضُ اللّهَ قَرْضًا حَسَنًا   سوره بقره آیه (۴۵)
+                                </span></h5>
+                            <p class="banner-dec"> کیست آن کسی که به خدا قرض نیکویی بدهد و خدا آن را چندین برابر می
+                                کند[و به او باز می گرداند] </p>
+                            <div class="banner-btn-wrapper">
+                                <a href="{% url 'dashboard' %}">
+                                    <button class="button1 button3 btn"><span class="title"> ورود به ناحیه کاربری</span>
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="banner-image">
+                            <img src="{% static 'assets/image/toppng.com.png' %}" class="banner-img" alt="" title="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'assets/js/2.2.4jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/switcher.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/common.js' %}"></script>
 </body>
+
 </html>
